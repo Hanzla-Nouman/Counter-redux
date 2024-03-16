@@ -3,7 +3,7 @@ import React from 'react'
 const Privacy = () => {
   return (
     <>
-    <h3>Privacy mode enabled</h3>
+    <h3>Privacy mode!!!</h3>
     </>
   )
 }
