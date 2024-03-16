@@ -11,3 +11,6 @@ body{
   align-items: center;
   background: #2d2a2a
 }
+.input{
+  width: 90px;
+}
