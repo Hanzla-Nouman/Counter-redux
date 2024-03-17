@@ -1,11 +1,11 @@
+import "../App.css";
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { counterAction } from "../store/counter";
 import { privacyAction } from "../store/privacy";
-import "../App.css";
 
 const Controls = () => {
-  const inputElemet = useRef();
+  const inputElement = useRef();
   const dispatch = useDispatch();
 
   const handleInc = () => {
@@ -15,12 +15,15 @@ const Controls = () => {
     dispatch(counterAction.deccrement());
   };
   const handleAdd = () => {
-    dispatch(counterAction.add({ num: inputElemet.current.value }));
+    dispatch(counterAction.add({ num: inputElement.current.value }));
+    inputElement.current.value = "";
   };
-  
+
   const handleSub = () => {
-    dispatch(counterAction.subtract({ num: inputElemet.current.value }));
+    dispatch(counterAction.subtract({ num: inputElement.current.value }));
+    inputElement.current.value = "";
   };
+
   const handlePrivacy = () => {
     dispatch(privacyAction.toggle());
   };
@@ -44,7 +47,7 @@ const Controls = () => {
           placeholder="Any Number"
           aria-label="Username"
           aria-describedby="basic-addon1"
-          ref={inputElemet}
+          ref={inputElement}
         />
         <button className="btn-info btn btn-md px-2 m-2" onClick={handleAdd}>
           <b> Add</b>

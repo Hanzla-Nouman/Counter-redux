@@ -2,19 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const counterSlice = createSlice({
   name: "counter",
-  initialState: { counterVal: 0 },
+  initialState: { counterValue: 0 },
   reducers: {
     increment: (state) => {
-      state.counterVal++;
+      state.counterValue++;
     },
     deccrement: (state) => {
-      state.counterVal--;
+      state.counterValue--;
     },
     add: (state, action) => {
-      state.counterVal += Number(action.payload.num);
+      state.counterValue += Number(action.payload.num);
     },
     subtract: (state, action) => {
-      state.counterVal -= Number(action.payload.num);
+      state.counterValue -= Number(action.payload.num);
     },
   },
 });

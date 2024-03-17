@@ -9,7 +9,8 @@ body{
   justify-content: center;
   display:flex;
   align-items: center;
-  background: #2d2a2a
+  background: #2d2a2a;
+   background-color: #2d2a2a;
 }
 .input{
   width: 90px;
